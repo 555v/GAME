@@ -3,17 +3,35 @@
 <head>
 <meta charset="utf-8">
 <title>room</title>
+	<style type="text/css">
+	
+	</style>
+
 </head>
 
 <body >
 
 <div style="text-align: center;width: 1184;height: 667" >
 	
-	<img src="imgs/room11.jpg" width="960"  align="middle"><a href="room2.html">
-	<input type="button" style="background:#DC6530 ;width:150px;height:60px;font-size: 30px;font-family:'幼圆';font-weight: bold;color: aliceblue;position: absolute;left:791px;top:335px" value="开启信封" name="b1">
+	<img src="imgs/room11.jpg" width="960"  align="middle">
+	<!--<input type="button" style="background:#DC6530 ;width:150px;height:60px;font-size: 20px;font-family:'幼圆';font-weight: bold;color: aliceblue;position: absolute;left:791px;top:335px" value="点击信封开启" name="b1">-->
+	<p style="font-size: 25px;font-family: '幼圆';font-weight: bold;color:aliceblue;position:absolute;top: 300px;left: 800px">点击拆开信封</p>
+	<a href="room2.html">
+	<img id="img" src="imgs/mail.png.png" width="300px" onmouseover="bigger()" onmouseout="smaller()" style="position: absolute;top: 184px;right: 700px">
 	</a>
-	<img src="imgs/mail.png.png" width="350" style="position: absolute;top: 184px;right: 700px">
 </div>
-	
+	<script type="text/javascript">
+var img = document.getElementById('img')
+function bigger(){
+img.style.width= '350px';
+img.style.height = '350px';
+}
+
+function smaller(){
+img.style.width = '300px';
+img.style.height = '300px';
+}
+
+</script> 
 </body>
 </html>

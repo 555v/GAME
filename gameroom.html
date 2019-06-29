@@ -7,7 +7,24 @@
 
 <body>
 	<div style="text-align: center;width: 1184;height: 667">
-	<img src="imgs/gameroom.jpg" width="960">
+	<img src="imgs/gameroom1.jpg" width="960">
+	<a href="game11.html">
+	<img id="land1" src="imgs/land1.png" onMouseOver="bigger()" onMouseOut="smaller()" width="360" style="position: absolute;top: 230px;right: 874px">
+	</a>
+	<p style="font-size: 40px;font-family: '幼圆';font-weight: bold;color: #B76B54;position: absolute;top: 377px;left: 367px">回忆岛</p>
 	</div>
+	<script type="text/javascript">
+var img = document.getElementById('land1')
+function bigger(){
+img.style.width= '380px';
+img.style.height = '380px';
+}
+
+function smaller(){
+img.style.width = '360px';
+img.style.height = '360px';
+}
+
+</script> 
 </body>
 </html>
