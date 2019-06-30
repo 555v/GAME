@@ -7,12 +7,25 @@
 
 <body>
 	<div style="text-align: center;width: 1184;height: 667">
-	<img src="imgs/gameroom1.jpg" width="960">
-	<a href="game11.html">
+	<img src="imgs/gameroom2.jpg" width="960"><a href="game11.html">
 	<img id="land1" src="imgs/land1.png" onMouseOver="bigger()" onMouseOut="smaller()" width="360" style="position: absolute;top: 230px;right: 874px">
 	</a>
 	<p style="font-size: 40px;font-family: '幼圆';font-weight: bold;color: #B76B54;position: absolute;top: 377px;left: 367px">回忆岛</p>
-	</div>
+	<a href="game22.html">
+	<img id="land2" src="imgs/land2.png" onMouseOver="bigger2()" onMouseOut="smaller2()" width="190" style="position: absolute;top: -23px;right: 895px">
+	</a>
+	<p style="font-size: 40px;font-family: '幼圆';font-weight: bold;color: #CB97D4;position: absolute;top: 69px;left: 342px">变号岛</p>
+	<a href="game33.html">
+	<img id="land3" src="imgs/land3.png" onMouseOver="bigger3()" onMouseOut="smaller3()" width="300" style="position: absolute;top: 97px;left: 629px">
+	</a>
+	<p style="font-size: 40px;font-family: '幼圆';font-weight: bold;color: seagreen;position: absolute;top: 312px;left: 618px">优先岛</p>
+	<a href="game44.html">
+	<img id="land4" src="imgs/land4.png" onMouseOver="bigger4()" onMouseOut="smaller4()" width="320" style="position: absolute;top: 285px;left:  892px">
+	</a>
+	<a href="game55.html">
+	<img id="land5" src="imgs/land5.png" onMouseOver="bigger5()" onMouseOut="smaller5()" width="300" style="position: absolute;top: -24px;right: 293px">
+	</a>
+</div>
 	<script type="text/javascript">
 var img = document.getElementById('land1')
 function bigger(){
@@ -24,7 +37,46 @@ function smaller(){
 img.style.width = '360px';
 img.style.height = '360px';
 }
+var land = document.getElementById('land2')
+function bigger2(){
+land.style.width= '200px';
 
+}
+
+function smaller2(){
+land.style.width = '190px';
+
+}
+var land3 = document.getElementById('land3')
+function bigger3(){
+land3.style.width= '320px';
+
+}
+
+function smaller3(){
+land3.style.width = '300px';
+
+}
+var land4 = document.getElementById('land4')
+function bigger4(){
+land4.style.width= '340px';
+
+}
+
+function smaller4(){
+land4.style.width = '320px';
+
+}
+var land5 = document.getElementById('land5')
+function bigger5(){
+land5.style.width= '320px';
+
+}
+
+function smaller5(){
+land5.style.width = '300px';
+
+}
 </script> 
 </body>
 </html>
