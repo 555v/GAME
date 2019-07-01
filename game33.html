@@ -3,15 +3,33 @@
 <head>
 <meta charset="utf-8">
 <title>game33</title>
+	<style type="text/css">
+		.a{
+			position: relative;
+			margin: 0 auto;
+			width: 960px;
+			height: 547px;
+		}
+		#ball2{
+			position: absolute;
+			top: 60px;
+			left: 680px;
+		}
+		#p1{
+			position: absolute;
+			top: 184px;
+			left: 300px;
+		}
+	</style>
 </head>
 
 <body>
-	<div style="text-align: center;width: 1184;height: 667" >
+	<div class="a">
 	<img src="imgs/game33.jpg" width="960" height="547">
 	<a href="class3.html">
-	<img id="ball2" src="imgs/1 (67).png" onMouseOver="bigger()" onMouseOut="smaller()" width="200" style="position: absolute;top: 60px;right: 318px">
+	<img id="ball2" src="imgs/1 (67).png" onMouseOver="bigger()" onMouseOut="smaller()" width="200">
 		</a>
-		<p style="font-size: 50px;position: absolute;top: 184px;left: 600px">备注：第三关问题</p>
+		<p id="p1" style="font-size: 50px">备注：第三关问题</p>
 	</div>
 	<script type="text/javascript">
 		var ball=document.getElementById('ball2')

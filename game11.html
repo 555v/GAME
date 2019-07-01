@@ -3,15 +3,40 @@
 <head>
 <meta charset="utf-8">
 <title>game11</title>
+	<style type="text/css">
+		.a{
+			position: relative;
+			margin: 0 auto;
+			width: 960px;
+			height: 547px;
+		}
+		#ball2{
+			position: absolute;
+			top: 60px;
+			left: 680px;
+		}
+		#p2{
+			position: absolute;
+			top: 184px;
+			left: 380px;
+		}
+		#p1{
+			position: absolute;
+			top: 100px;
+			left: 480px;
+		}
+		
+	</style>
 </head>
 
 <body>
-	<div style="text-align: center;width: 1184;height: 667" >
+	<div class="a" >
 	<img src="imgs/game111.jpg" width="960" height="547">
 	<a href="class1.html">
-	<img id="ball2" src="imgs/1 (71).png" onMouseOver="bigger()" onMouseOut="smaller()" width="200" height="250" style="position: absolute;top: 60px;right: 318px">
+	<img id="ball2" src="imgs/1 (71).png" onMouseOver="bigger()" onMouseOut="smaller()" width="200" height="250" >
 		</a>
-		<p style="font-size: 50px;position: absolute;top: 184px;left: 600px">备注：第一关问题</p>
+		<p id="p1" style="font-size: 22px;font-family: '幼圆';font-weight: bold;color:brown">向星球使者小土求助</p>
+		<p id="p2" style="font-size: 50px">3 * 2 + 5 = ?</p>
 	</div>
 	<script type="text/javascript">
 		var ball=document.getElementById('ball2')
