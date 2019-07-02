@@ -17,8 +17,19 @@
 		}
 		#p1{
 			position: absolute;
-			top: 184px;
+			top: 100px;
 			left: 110px;
+		}
+		#p2{
+			position: absolute;
+			top: 30px;
+			left: 480px;
+			z-index:999;
+		}
+		#talk{
+			position: absolute;
+			top: -10px;
+			left: 400px;
 		}
 	</style>
 </head>
@@ -29,7 +40,9 @@
 		<a href="gift.html">
 	<img id="ball2" src="imgs/1 (19).png" onMouseOver="bigger()" onMouseOut="smaller()" width="200">
 		</a>
-		<p id="p1" style="font-size: 50px">备注：恭喜通关并告诉礼物的位置</p>
+		<p id="p1" style="font-size: 50px;font-family: '华文楷体';text-decoration: underline;color: aliceblue">爸爸：<br>&nbsp;&nbsp;恭喜多多成功通关，真棒！<br>快去客厅看看花盆后面是什么？</p>
+		<p id="p2" style="font-size: 20px;font-family: '幼圆';font-weight: bold;color:aliceblue">快跟我去客厅叭</p>
+		<img id="talk" src="imgs/1 (12).png" width="300px" height="150px">
 		</div>
 		<script type="text/javascript">
 		var ball=document.getElementById('ball2')

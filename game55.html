@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>game55</title>
 	<style type="text/css">
+
 		.a{
 			position: relative;
 			margin: 0 auto;
@@ -17,9 +18,23 @@
 		}
 		#p1{
 			position: absolute;
-			top: 184px;
-			left: 300px;
+			top: 140px;
+			left: 220px;
 		}
+		#p2{
+			position: absolute;
+			top: 40px;
+			left: 450px;
+			z-index: 999;
+			
+		}
+		#talk{
+			position: absolute;
+			top: 0px;
+			left: 350px;
+			
+		}
+		
 	</style>
 </head>
 
@@ -29,7 +44,9 @@
 	<a href="class5.html">
 	<img id="ball2" src="imgs/1 (30).png" onMouseOver="bigger()" onMouseOut="smaller()" width="200">
 		</a>
-		<p id="p1" style="font-size: 50px">备注：第五关问题</p>
+		<p id="p1" style="font-size: 50px;font-family: '幼圆';font-weight: bold;color: lavender">嗯哼，最就是后一关了<br>前面知识点掌握了吗？<br>再跟着豆豆复习一下吧！</p>
+		<p id="p2" style="font-size: 20px;font-family: '幼圆';font-weight: bold;color:aliceblue">跟豆豆一起复习吧</p>
+		<img id="talk" src="imgs/1 (12).png" width="350px" height="150px">
 	</div>
 	<script type="text/javascript">
 		var ball=document.getElementById('ball2')

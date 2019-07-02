@@ -14,17 +14,71 @@
 			position: absolute;
 			top: 112px;
 			left: 100px;
+			z-index: 9;
 		}
-		
+		#fire1{
+			position: absolute;
+			top: -30px;
+			left: -20px;
+			z-index: 10;
+		}
+		#fire2{
+			position: absolute;
+			top: 150px;
+			z-index: 10;
+		}
+		#ball{
+			position: absolute;
+			top: 0px;
+			left: 650px;
+			z-index: 0;
+		}
+		#spring{
+			position: absolute;
+			top: 300px;
+			left: 700px;
+			z-index: 10;
+		}
+		#fire3{
+			position: absolute;
+			top: 0px;
+			left: 700px;
+			z-index: 10;
+		}
+		#p1{
+			position: absolute;
+			top: 420px;
+			left: 470px;
+		}
 	</style>
 </head>
 
 <body>
 	<div class="a">
 		<img src="imgs/finalroom.jpg" width="960" height="547">
-		<a href="gameroom.html">
-	<img id="ball2" src="imgs/piao.jpg" width="750"></a>
+		
+	<img id="ball2" src="imgs/piao.jpg" width="750">
+	<img id="fire1" src="imgs/1 (4).png" width="400px">
+	<img id="fire2" src="imgs/1 (5).png" width="400px">
+	<img id="ball" src="imgs/3.png" width="200px">
+	<a href="index.html">
+	<img id="spring" src="imgs/spring.png" width="200px" onMouseOver="bigger()" onMouseOut="smaller()">
+	</a>
+	<p id="p1" style="font-size: 30px;font-weight: bold;font-family: '幼圆';color:darkred">点击酒瓶再玩一次</p>
+	<img id="fire3" src="imgs/1 (11).png" width="200px">
 		</div>
+	<script type="text/javascript">
+var img = document.getElementById('spring')
+function bigger(){
+spring.style.width= '240px';
 
+}
+
+function smaller(){
+spring.style.width = '200px';
+
+}
+
+</script> 
 </body>
 </html>
