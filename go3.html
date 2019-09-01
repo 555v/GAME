@@ -17,8 +17,164 @@
 		}
 		#p1{
 			position: absolute;
-			top: 184px;
+			top: 44px;
 			left: 300px;
+		}
+		#p2{
+			position: absolute;
+			top: 144px;
+			left: 470px;
+		}
+		#p3{
+			position: absolute;
+			top: 244px;
+			left: 380px;
+		}
+		#p4{
+			position: absolute;
+			top: -20px;
+			left: 160px;
+		}
+		#p5{
+			position: absolute;
+			top: 370px;
+			left: 460px;
+		}
+		#i1{
+			position: absolute;
+			top: 113px;
+			left: 311px;
+			color:aliceblue;
+			background-color: indianred;
+			font-size: 30px;
+			border: 2px solid;
+			border-radius: 15px;
+			
+			
+			
+		}
+		#i2{
+			position: absolute;
+			top: 113px;
+			left: 400px;
+			color:aliceblue;
+			background-color: indianred;
+			font-size: 30px;
+			border: 2px solid white;
+			border-radius: 15px;
+		}
+		#i3{
+			position: absolute;
+			top: 70px;
+			left: 480px;
+			border-radius: 10px;
+			font-size: 30px;
+			color:#FF2A37;
+			border: 2px solid white;
+			background-color: transparent;
+			border-width: 0px;
+			
+		}
+		#i11{
+			position: absolute;
+			top: 208px;
+			left: 481px;
+			color:aliceblue;
+			background-color: indianred;
+			font-size: 30px;
+			border: 2px solid;
+			border-radius: 15px;
+			
+			
+			
+		}
+		#i22{
+			position: absolute;
+			top: 208px;
+			left: 580px;
+			color:aliceblue;
+			background-color: indianred;
+			font-size: 30px;
+			border: 2px solid white;
+			border-radius: 15px;
+		}
+		#i33{
+			position: absolute;
+			top: 169px;
+			left: 620px;
+			border-radius: 10px;
+			font-size: 30px;
+			color:#FF2A37;
+			border: 2px solid white;
+			background-color: transparent;
+			border-width: 0px;
+			
+		}
+		#i111{
+			position: absolute;
+			top: 318px;
+			left: 401px;
+			color:aliceblue;
+			background-color:indianred;
+			font-size: 30px;
+			border: 2px solid;
+			border-radius: 15px;
+			
+			
+			
+		}
+		#i222{
+			position: absolute;
+			top: 318px;
+			left: 500px;
+			color:aliceblue;
+			background-color:indianred;
+			font-size: 30px;
+			border: 2px solid white;
+			border-radius: 15px;
+		}
+		#i333{
+			position: absolute;
+			top: 269px;
+			left: 580px;
+			border-radius: 10px;
+			font-size: 30px;
+			color:#FF2A37;
+			border: 2px solid white;
+			background-color: transparent;
+			border-width: 0px;
+			
+		}
+		#a21{
+			position: absolute;
+			top: 70px;
+			left: 520px;
+			background-color: transparent;
+			border-width:0px;
+		}
+		#a22{
+			position: absolute;
+			top: 169px;
+			left: 270px;
+			background-color: transparent;
+			border-width:0px;
+		}
+		#a23{
+			position: absolute;
+			top: 269px;
+			left: 670px;
+			background-color: transparent;
+			border-width:0px;
+		}
+		#answer{
+			position: absolute;
+			top: 233px;
+			left: 700px;
+			color:cadetblue;
+			background-color: transparent;
+			font-size: 18px;
+			border: 2px solid ;
+			border-radius: 15px;
 		}
 	</style>
 </head>
@@ -29,7 +185,24 @@
 	<a href="gameroom.html">
 	<img id="ball2" src="imgs/1 (67).png" onMouseOver="bigger()" onMouseOut="smaller()" width="200" >
 	</a>
-	<p id="p1" style="font-size: 50px">备注：第三关测试</p>
+	<p id="p1" style="font-size: 25px">3*(2+1)+4=10&nbsp;(&nbsp;&nbsp;&nbsp;)</p>
+	<p id="p2" style="font-size: 25px">3-(5-2*2)=5&nbsp;(&nbsp;&nbsp;&nbsp;)</p>
+	<p id="p3" style="font-size: 25px">7*(2*3-4)+1=15&nbsp;(&nbsp;&nbsp;&nbsp;)</p>
+	<p id="p5" style="font-size: 25px；font-family:'幼圆';font-weight: bold;color:cornflowerblue">掌握了就跟着星球使者进入下一关吧！</p>
+	<p id="p4" style="font-size: 35px;font-family:'幼圆';font-weight: bold;color: maroon">完成下列判断题：</p>
+	<input type="button" title="height:50px;width:100px" id="i1" value=" √ " onClick="compute(this.id)"/>
+	<input type="button" id="i2" value=" × " title="heght:50px;width:100px" onClick="compute(this.id)"/>
+	<input type="button" title="height:50px;width:100px" id="i11" value=" √ " onClick="compute(this.id)"/>
+	<input type="button" id="i22" value=" × " title="heght:50px;width:100px" onClick="compute(this.id)"/>
+	<input type="button" title="height:50px;width:100px" id="i111" value=" √ " onClick="compute(this.id)"/>
+	<input type="button" id="i222" value=" × " title="heght:50px;width:100px" onClick="compute(this.id)"/>
+	<input type="text" style="height:30px;width:40px;text-align: center" class="i3" id="i3" value="?"/>
+	<input type="text" style="height:30px;width:40px;text-align: center" class="i33" id="i33" value="?"/>
+	<input type="text" style="height:30px;width:40px;text-align: center" class="i333" id="i333" value="?"/>
+	<input type="text" id="a21" style="text-align: center;height: 30px;width: 200px;font-size: 18px;color: firebrick" disabled>
+	<input type="text" id="a22" style="text-align: center;height: 30px;width: 200px;font-size: 18px;color: firebrick" disabled>
+	<input type="text" id="a23" style="text-align: center;height: 30px;width: 200px;font-size: 18px;color: firebrick" disabled>
+	<input type="button" id="answer" title="height:30px;width:120px;" onClick="sub()" value="完成后点击查看解析"/>
 	</div>
 	<script type="text/javascript">
 		var ball=document.getElementById('ball2')
@@ -37,9 +210,29 @@
 			ball.style.width='220px';
 			
 		}
-		function smaller(){
+		function smaller(id){
 			ball.style.width='200px';
 			
+		}
+		function compute(id){
+			if(id=="i1")
+			document.getElementById("i3").value="√";
+			if(id=="i2")
+			document.getElementById("i3").value="×";
+			if(id=="i11")
+			document.getElementById("i33").value="√";
+			if(id=="i22")
+			document.getElementById("i33").value="×";
+			if(id=="i111")
+			document.getElementById("i333").value="√";
+			if(id=="i222")
+			document.getElementById("i333").value="×";
+			
+		}
+		function sub(){
+			document.getElementById("a21").value="√  ∵3*2+4=6+4=10";
+			document.getElementById("a22").value="×  ∵3-(5-4)=3-1=2";
+			document.getElementById("a23").value="√  ∵7*(6-4)+1=7*2+1=14+1=15";
 		}
 	</script>
 </body>

@@ -15,10 +15,119 @@
 			top: 60px;
 			left: 680px;
 		}
+		#p0{
+			position: absolute;
+			top: 4px;
+			left: 40px;
+			color: aliceblue;
+			font-family: "幼圆";
+		}
 		#p1{
 			position: absolute;
-			top: 184px;
-			left: 300px;
+			top: 84px;
+			left: 40px;
+		}
+		#p2{
+			position: absolute;
+			top: 144px;
+			left: 40px;
+		}
+		#p3{
+			position: absolute;
+			top: 204px;
+			left: 40px;
+		}
+		#p4{
+			position: absolute;
+			top: 264px;
+			left: 40px;
+		}
+		#p5{
+			position: absolute;
+			top: 384px;
+			left: 280px;
+			font-family: "华文楷体";
+			color: cornflowerblue;
+		}
+		#i1{
+			position: absolute;
+			top: 103px;
+			left: 371px;
+			color:aliceblue;
+			background-color:aliceblue;
+			font-size: 30px;
+			border: 2px solid;
+			border-radius: 15px;	
+		}
+		#i2{
+			position: absolute;
+			top: 163px;
+			left: 371px;
+			color:aliceblue;
+			background-color:aliceblue;
+			font-size: 30px;
+			border: 2px solid;
+			border-radius: 15px;	
+		}
+		#i3{
+			position: absolute;
+			top: 223px;
+			left: 371px;
+			color:aliceblue;
+			background-color:aliceblue;
+			font-size: 30px;
+			border: 2px solid;
+			border-radius: 15px;	
+			
+		}
+		#i4{
+			position: absolute;
+			top: 283px;
+			left: 451px;
+			color:aliceblue;
+			background-color:aliceblue;
+			font-size: 30px;
+			border: 2px solid;
+			border-radius: 15px;	
+		}
+		#a21{
+			position: absolute;
+			top: 100px;
+			left: 480px;
+			background-color: transparent;
+			border-width:0px;
+		}
+		#a22{
+			position: absolute;
+			top: 164px;
+			left: 480px;
+			background-color: transparent;
+			border-width:0px;
+		}
+		#a23{
+			position: absolute;
+			top: 225px;
+			left: 480px;
+			background-color: transparent;
+			border-width:0px;
+		}
+		#a24{
+			position: absolute;
+			top: 330px;
+			left: 320px;
+			
+			background-color: transparent;
+			border-width:0px;
+		}
+		#answer{
+			position: absolute;
+			top: 363px;
+			left: 350px;
+			color:cadetblue;
+			background-color: transparent;
+			font-size: 18px;
+			border: 2px solid ;
+			border-radius: 15px;
 		}
 	</style>
 </head>
@@ -29,8 +138,22 @@
 	<a href="gameroom.html">
 	<img id="ball2" src="imgs/1 (61).png" onMouseOver="bigger()" onMouseOut="smaller()" width="200">
 	</a>
-	<p id="p1" style="font-size: 50px">备注：第四关测试</p>
-	</div>
+	<p id="p0" style="font-size: 35px">纠错关：对的填”√“，错的填正确答案</p>
+	<p id="p1" style="font-size: 25px">7-(3+(4-1))=7-(3+3)=7-6=1</p>
+	<p id="p2" style="font-size: 25px">6+(3+(8-3*2))=9+5*2=19</p>
+	<p id="p3" style="font-size: 25px">8-(2-(3*1+2))=8-2-3+2=5</p>
+	<p id="p4" style="font-size: 25px">-(-2)-(2-(-6+3))=2-(2+3)=2-5=-3</p>
+	<p id="p5" style="font-size: 25px">赶紧通关跟星球<br>使者进入最后一关吧！</p>
+	<input type="text" style="height: 25px;width: 60px;text-align-last: center;color: black" id="i1" />
+	<input type="text" style="height: 25px;width: 60px;text-align-last: center;color: black" id="i2" />
+	<input type="text" style="height: 25px;width: 60px;text-align-last: center;color: black" id="i3" />
+	<input type="text" style="height: 25px;width: 60px;text-align-last: center;color: black" id="i4" />
+	<input type="text" id="a21" style="text-align: center;height: 30px;width: 200px;font-size: 18px;color: firebrick" disabled>
+	<input type="text" id="a22" style="text-align: center;height: 30px;width: 200px;font-size: 18px;color: firebrick" disabled>
+	<input type="text" id="a23" style="text-align: center;height: 30px;width: 200px;font-size: 18px;color: firebrick" disabled>
+	<input type="text" id="a24" style="text-align: center;height: 30px;width: 200px;font-size: 18px;color: firebrick" disabled>
+	<input type="button" id="answer" title="height:30px;width:120px;" onClick="sub()" value="完成后点击查看解析"/>
+</div>
 	<script type="text/javascript">
 		var ball=document.getElementById('ball2')
 		function bigger(){
@@ -40,6 +163,12 @@
 		function smaller(){
 			ball.style.width='200px';
 			
+		}
+		function sub(){
+			document.getElementById("a21").value="√ ∵7-(3+3)=7-6=1";
+			document.getElementById("a22").value="× ∵6+(3+2)=6+5=11";
+			document.getElementById("a23").value="× ∵8-(2-5)=8+3=11";
+			document.getElementById("a24").value="√ ∵2-(2+3)=2-5=-3";
 		}
 	</script>
 

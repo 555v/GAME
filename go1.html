@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>go1</title>
 	<style type="text/css">
+		
 		.a{
 			position: relative;
 			margin: 0 auto;
@@ -15,21 +16,160 @@
 			top: 60px;
 			left: 680px;
 		}
+		#p0{
+			position: absolute;
+			top: -16px;
+			left: 80px;
+		}
 		#p1{
 			position: absolute;
+			top: 83px;
+			left: 124px;
+		}
+		#p2{
+			position: absolute;
+			top: 157px;
+			left: 124px;
+		}
+		#p3{
+			position: absolute;
+			top: 237px;
+			left: 124px;
+		}
+		#a1{
+			text-decoration: none;
+			color:aliceblue;
+		}
+		#a2{
+			text-decoration: none;
+			color: aliceblue;
+		}
+		#p4{
+			position: absolute;
 			top: 184px;
-			left: 300px;
+			left: 450px;
+		}
+		#p5{
+			position: absolute;
+			top: 360px;
+			left: 230px;
+		}
+		#i1{
+			position: absolute;
+			top: 133px;
+			left: 431px;
+			color:aliceblue;
+			background-color: transparent;
+			font-size: 30px;
+			border: 2px solid white;
+			border-radius: 15px;
+			
+		}
+		#i2{
+			position: absolute;
+			top: 133px;
+			left: 560px;
+			color:aliceblue;
+			background-color: transparent;
+			font-size: 30px;
+			border: 2px solid white;
+			border-radius: 15px;
+		}
+		#i3{
+			position: absolute;
+			top: 136px;
+			left: 339px;
+			border-radius: 10px;
+			font-size: 30px;
+			color:#FF2A37;
+			border: 2px solid white;
+		}
+		
+		#i11{
+			position: absolute;
+			top: 205px;
+			left: 431px;
+			color:aliceblue;
+			background-color: transparent;
+			font-size: 30px;
+			border: 2px solid white;
+			border-radius: 15px;
+			
+		}
+		#i22{
+			position: absolute;
+			top: 205px;
+			left: 560px;
+			color:aliceblue;
+			background-color: transparent;
+			font-size: 30px;
+			border: 2px solid white;
+			border-radius: 15px;
+		}
+		#i33{
+			position: absolute;
+			top: 209px;
+			left: 339px;
+			border-radius: 10px;
+			font-size: 30px;
+			color:#FF2A37;
+			border: 2px solid white;
+		}
+		#i111{
+			position: absolute;
+			top: 285px;
+			left: 431px;
+			color:aliceblue;
+			background-color: transparent;
+			font-size: 30px;
+			border: 2px solid white;
+			border-radius: 15px;
+			
+		}
+		#i222{
+			position: absolute;
+			top: 285px;
+			left: 560px;
+			color:aliceblue;
+			background-color: transparent;
+			font-size: 30px;
+			border: 2px solid white;
+			border-radius: 15px;
+		}
+		#i333{
+			position: absolute;
+			top: 289px;
+			left: 339px;
+			border-radius: 10px;
+			font-size: 30px;
+			color:#FF2A37;
+			border: 2px solid white;
 		}
 	</style>
+	
 </head>
 
 <body>
 	<div class="a">
 	<img src="imgs/go1.jpg" width="960" height="547">
 	<a href="gameroom.html">
-	<img id="ball2" src="imgs/1 (71).png" onMouseOver="bigger()" onMouseOut="smaller()" width="200" height="250"">
+	<img id="ball2" src="imgs/1 (71).png" onMouseOver="bigger()" onMouseOut="smaller()" width="200" height="250">
 	</a>
-	<p id="p1" style="font-size: 50px">备注：第一关测试</p>
+	<p id="p0" style="font-size: 25px;font-weight: bold;font-family: 'X 小葱手迹';color">选择答案，若正确则显示数字，若错误则显示”X“</p>
+	<p id="p1" style="font-size: 40px">3-2+5-1=</p>	
+	<input type="button" title="height:50px;width:100px" id="i1" value="A 4" onClick="compute(this.id)"/>
+	<input type="button" id="i2" value="B 5" title="heght:50px;width:100px" onClick="compute(this.id)"/>
+	<input type="text" style="height:30px;width:40px;text-align: center" class="i3" id="i3" value="?"/>
+	<p id="p2" style="font-size:40px" >6-2+3-7=</p>
+	<input type="button" title="height:50px;width:100px" id="i11" value="A 0" onClick="compute(this.id)"/>
+	<input type="button" id="i22" value="B 1" title="heght:50px;width:100px" onClick="compute(this.id)"/>
+	<input type="text" style="height:30px;width:40px;text-align: center" class="i33" id="i33" value="?"/>
+	<p id="p3" style="font-size:40px">2+3*2+1=</p>
+	<input type="button" title="height:50px;width:100px" id="i111" value="A 9" onClick="compute(this.id)"/>
+	<input type="button" id="i222" value="B 10" title="heght:50px;width:100px" onClick="compute(this.id)"/>
+	<input type="text" style="height:30px;width:40px;text-align: center" class="i333" id="i333" value="?"/>
+		<p id="p5" style="font-size: 25px;font-family: '幼圆';font-weight: bold;color: coral">若全部答对，则点击星球使者进入下一关</p>
+	
 	</div>
 	<script type="text/javascript">
 		var ball=document.getElementById('ball2')
@@ -41,6 +181,23 @@
 			ball.style.width='200px';
 			ball.style.height='250px';
 		}
+		function compute(id){
+			if(id=="i1")
+			document.getElementById("i3").value="X";
+			if(id=="i2")
+				document.getElementById("i3").value="5";
+			if(id=="i11")
+				document.getElementById("i33").value="0";
+			if(id=="i22")
+				document.getElementById("i33").value="X";
+			if(id=="i111")
+				document.getElementById("i333").value="9";
+			if(id=="i222")
+				document.getElementById("i333").value="X";
+			
+				
+
+}
 	</script>
 
 </body>

@@ -17,8 +17,18 @@
 		}
 		#p1{
 			position: absolute;
-			top: 184px;
-			left: 300px;
+			top: 110px;
+			left: 220px;
+		}
+		#em1{
+			font-size: 23px;
+			font-weight: bold;
+			color: coral
+		}
+		#em2{
+			font-size: 23px;
+			font-weight: bold;
+			color: coral;
 		}
 	</style>
 </head>
@@ -29,7 +39,7 @@
 	<a href="go5.html">
 	<img id="ball2" src="imgs/1 (30).png" onMouseOver="bigger()" onMouseOut="smaller()" width="200">
 		</a>
-		<p id="p1" style="font-size: 50px">备注：第五关知识点</p>
+		<p id="p1" style="font-size: 20px;font-family:'楷体';color: aliceblue">1、加减混在一起，应该<em id="em1">从左往右计算</em>，如果有乘法<br>和除法，则<em id="em2">先乘除后加减</em>。<br>2、括号前是<em id="em1">负号</em>去括号要<em id="em3">变符号</em>,括号前是<em id="em2">正号</em><br>&nbsp;去括号<em id="em4">不变符号<br>3、加减乘除括号同时存在时，从左往右，<br>&nbsp;<em id="em1">先计算括号内的算式</em>，去括号，再计算<br>乘除最后算加减法.<br>4.括号中包含括号时，<em id="em1">从里向外，依次<br>&nbsp;计算</em>，先算最里层的括号的算式，再算<br>外层的算式.<br>5.准备好跟豆豆迎接终极挑战了吗？快去吧！</p>
 	</div>
 	<script type="text/javascript">
 		var ball=document.getElementById('ball2')
