@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>go1</title>
-	<style type="text/css">
+<style type="text/css">
 		
 		.a{
 			position: relative;
@@ -145,15 +145,57 @@
 			color:#FF2A37;
 			border: 2px solid white;
 		}
+		#backgr{
+			position: absolute;
+			top:390px;
+			left: 740px;
+			font-family:幼圆;
+			font-size: 20px;
+			font-weight:bolder;
+			color: indianred;
+			border-radius: 10px;
+			background: white;
+			box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.5);
+			width: 200px;
+			height: 40px;
+		}
+		#backgr2{
+			position: absolute;
+			top:440px;
+			left: 740px;
+			font-family:幼圆;
+			font-size: 20px;
+			font-weight:bolder;
+			color: indianred;
+			border-radius: 10px;
+			background: white;
+			box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.5);
+			width: 200px;
+			height: 40px;
+		}
+		#backgr3{
+			position: absolute;
+			top:490px;
+			left: 740px;
+			font-family:幼圆;
+			font-size: 20px;
+			font-weight:bolder;
+			color: indianred;
+			border-radius: 10px;
+			background: white;
+			box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.5);
+			width: 200px;
+			height: 40px;
+		}
 	</style>
-	
+<link href="index.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 	<div class="a">
 	<img src="imgs/go1.jpg" width="960" height="547">
-	<a href="gameroom.html">
-	<img id="ball2" src="imgs/1 (71).png" onMouseOver="bigger()" onMouseOut="smaller()" width="200" height="250">
+	<a onClick="check()" class="imgHoverZoom">
+	<img id="ball2" src="imgs/1 (71).png"  width="200" height="250" onMouseOver="bibi()">
 	</a>
 	<p id="p0" style="font-size: 25px;font-weight: bold;font-family: 'X 小葱手迹';color">选择答案，若正确则显示数字，若错误则显示”X“</p>
 	<p id="p1" style="font-size: 40px">3-2+5-1=</p>	
@@ -168,19 +210,18 @@
 	<input type="button" title="height:50px;width:100px" id="i111" value="A 9" onClick="compute(this.id)"/>
 	<input type="button" id="i222" value="B 10" title="heght:50px;width:100px" onClick="compute(this.id)"/>
 	<input type="text" style="height:30px;width:40px;text-align: center" class="i333" id="i333" value="?"/>
-		<p id="p5" style="font-size: 25px;font-family: '幼圆';font-weight: bold;color: coral">若全部答对，则点击星球使者进入下一关</p>
-	
+		<p id="p5" style="font-size: 25px;font-family: '幼圆';font-weight: bold;color:aliceblue">若全部答对，则点击星球使者继续闯关吧</p>
+		<input type="button" id="backgr" value="返回关卡索引界面" onclick="javascript:window.location.href='gameroom.html'"
+		 onMouseOver="this.style.backgroundColor='yellow',bibi()" onMouseOut="this.style.backgroundColor='white'"/>
+		 <input type="button" id="backgr2" value="返回观看知识点" onclick="javascript:window.location.href='class1.html'"
+		 onMouseOver="this.style.backgroundColor='yellow',bibi()" onMouseOut="this.style.backgroundColor='white'"/>
+		 <input type="button" id="backgr3" onClick="check2()" value="直接进入下一关" onclick="javascript:window.location.href='class1.html'"
+		 onMouseOver="this.style.backgroundColor='yellow',bibi()" onMouseOut="this.style.backgroundColor='white'"/>
 	</div>
 	<script type="text/javascript">
-		var ball=document.getElementById('ball2')
-		function bigger(){
-			ball.style.width='220px';
-			ball.style.height='270px';
-		}
-		function smaller(){
-			ball.style.width='200px';
-			ball.style.height='250px';
-		}
+		var i3=document.getElementById('i3')
+		var i33=document.getElementById('i33')
+		var i333=document.getElementById('i333')
 		function compute(id){
 			if(id=="i1")
 			document.getElementById("i3").value="X";
@@ -198,6 +239,24 @@
 				
 
 }
+
+		function check(){
+			if(i3.value=="?"||i33.value=="?"||i333.value=="?")
+				alert("请先完成答题！");
+			else 
+				window.location.href='gameroom.html?id=2';
+		}
+		function check2(){
+			if(i3.value=="?"||i33.value=="?"||i333.value=="?")
+				alert("请先完成答题！");
+			else 
+				window.location.href='game22.html';
+		}
+		function bibi(){
+			var audio = document.createElement("audio");
+			audio.src = "music/Mouse on.wav";
+			audio.play();
+		}
 	</script>
 
 </body>

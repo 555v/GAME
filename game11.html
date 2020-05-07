@@ -25,28 +25,41 @@
 			top: 100px;
 			left: 480px;
 		}
+		#backgr{
+			position: absolute;
+			top:10px;
+			left: 80px;
+			font-family:幼圆;
+			font-size: 20px;
+			font-weight:bolder;
+			color: indianred;
+			border-radius: 10px;
+			background: white;
+			box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.5);
+			width: 200px;
+			height: 40px;
+		}
 		
 	</style>
+	<link href="index.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 	<div class="a" >
 	<img src="imgs/game111.jpg" width="960" height="547">
-	<a href="class1.html">
-	<img id="ball2" src="imgs/1 (71).png" onMouseOver="bigger()" onMouseOut="smaller()" width="200" height="250" >
+	<a href="class1.html" class="imgHoverZoom">
+	<img id="ball2" src="imgs/1 (71).png" width="200" height="250" onMouseOver="bibi()" >
 		</a>
 		<p id="p1" style="font-size: 22px;font-family: '幼圆';font-weight: bold;color:brown">向星球使者小橙求助</p>
 		<p id="p2" style="font-size: 50px">2 + 3 * 2 + 1= ？</p>
+		<input type="button" id="backgr" value="返回关卡索引界面" onclick="javascript:window.location.href='gameroom.html'"
+		 onMouseOver="this.style.backgroundColor='yellow',bibi()" onMouseOut="this.style.backgroundColor='white'"/>
 	</div>
 	<script type="text/javascript">
-		var ball=document.getElementById('ball2')
-		function bigger(){
-			ball.style.width='220px';
-			ball.style.height='270px';
-		}
-		function smaller(){
-			ball.style.width='200px';
-			ball.style.height='250px';
+		function bibi(){
+			var audio = document.createElement("audio");
+			audio.src = "music/Mouse on.wav";
+			audio.play();
 		}
 	</script>
 </body>

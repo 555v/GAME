@@ -4,6 +4,11 @@
 <meta charset="utf-8">
 <title>class1</title>
 	<style type="text/css">
+		@keyframes fade-in{  
+   		 0%{ opacity: 0;}
+    	100%{opacity:1;}
+		}
+		
 		.a{
 			position: relative;
 			margin: 0 auto;
@@ -19,6 +24,19 @@
 			position: absolute;
 			top: 90px;
 			left: 210px;
+			opacity: 0;      /*实先规定文字的状态是不显示的*/
+    		animation: fade-in 4s ease 0s 1;    /*调用名称为fade-in的动画，全程动画显示时间4S，进入方式为ease，延时0S进入，播放次数1次*/
+    		-webkit-animation: fade-in 4s ease 0s 1;
+   		 	-moz-animation: fade-in 4s ease 0s 1;
+   			 -o-animation: fade-in 4s ease 0s 1;
+   			 -ms-animation: fade-in 4s ease 0s 1;
+    
+    		/*规定动画的最后状态为结束状态*/
+    		animation-fill-mode:forwards;
+   			 -webkit-animation-fill-mode: forwards;  
+     		 -o-animation-fill-mode: forwards; 
+      		-ms-animation-fill-mode: forwards;   
+     		 -moz-animation-fill-mode: forwards; 
 		}
 		#em1{
 			font-size: 23px;
@@ -30,26 +48,41 @@
 			font-weight: bold;
 			color: coral;
 		}
+		#backgr{
+			position: absolute;
+			top:30px;
+			left: 100px;
+			font-family:幼圆;
+			font-size: 20px;
+			font-weight:bolder;
+			color: indianred;
+			border-radius: 10px;
+			background: white;
+			box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.5);
+			width: 200px;
+			height: 40px;
+		}
 	</style>
+	<link href="index.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 	<div class="a">
+	<audio src="music/Class1(1).wav" autoplay></audio>
 	<img src="imgs/class1.jpg" width="960" height="547">
-	<a href="go1.html">
-	<img id="ball2" src="imgs/1 (71).png" onMouseOver="bigger()" onMouseOut="smaller()" width="200" height="250">
+	<a href="go1.html" class="imgHoverZoom">
+	<img id="ball2" src="imgs/1 (71).png" width="200" height="250" onMouseOver="bibi()">
 		</a>
-		<p id="p1" style="font-size: 20px;font-family:'楷体';color: aliceblue">1、加减混在一起，应该<em id="em1">从左往右计算</em>，如果有乘法<br><br>和除法，则<em id="em2">先乘除后加减</em>。<br><br>2、理由：因为乘除优先级大于加减优先级，而加减<br><br>无优先级。<br><br>3、举例：<br><br>加减混合计算：2+7-6+13=9-6+13=3+13=16；<br><br>加减乘除混和运算：2+3*5=2+15=17；</p>
+		<p class="l1" id="p1" style="font-size: 20px;font-family:'楷体';color: aliceblue">1、加减混在一起，应该<em id="em1">从左往右计算</em>，如果有乘法<br><br>和除法，则<em id="em2">先乘除后加减</em>。<br><br>2、理由：因为乘除优先级大于加减优先级，而加减<br><br>无优先级。<br><br>3、举例：<br><br>加减混合计算：2+7-6+13=9-6+13=3+13=16；<br><br>加减乘除混和运算：2+3*5=2+15=17；</p>
+		<input type="button" id="backgr" value="返回关卡索引界面" onclick="javascript:window.location.href='gameroom.html'"
+		 onMouseOver="this.style.backgroundColor='yellow',bibi()" onMouseOut="this.style.backgroundColor='white'"/>
 	</div>
 	<script type="text/javascript">
-		var ball=document.getElementById('ball2')
-		function bigger(){
-			ball.style.width='220px';
-			ball.style.height='270px';
-		}
-		function smaller(){
-			ball.style.width='200px';
-			ball.style.height='250px';
+		
+		function bibi(){
+			var audio = document.createElement("audio");
+			audio.src = "music/Mouse on.wav";
+			audio.play();
 		}
 	</script>
 </body>

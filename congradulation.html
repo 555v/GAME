@@ -4,6 +4,16 @@
 <meta charset="utf-8">
 <title>congradulation</title>
 	<style type="text/css">
+		@font-face
+	{
+    	font-family: myFirstFont;
+    	src: url(X-小葱手迹.ttf);
+	}
+ 
+	div
+	{
+    	font-family:myFirstFont;
+	}
 		.a{
 			position: relative;
 			margin: 0 auto;
@@ -32,27 +42,25 @@
 			left: 400px;
 		}
 	</style>
+	<link href="index.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 	<div class="a">
+		<audio src="music/congradulationnew.wav" autoplay></audio>
 		<img src="imgs/congradulation.jpg" width="960" height="547">
-		<a href="gift.html">
-	<img id="ball2" src="imgs/1 (19).png" onMouseOver="bigger()" onMouseOut="smaller()" width="200">
+		<a href="gift.html" class="imgHoverZoom">
+	<img id="ball2" src="imgs/1 (19).png" width="200" onMouseOver="bibi()">
 		</a>
-		<p id="p1" style="font-size: 50px;font-family: '华文楷体';text-decoration: underline;color: aliceblue">爸爸：<br>&nbsp;&nbsp;恭喜多多成功通关，真棒！<br>快去客厅看看花盆后面是什么？</p>
+		<p id="p1" style="font-size: 50px;font-family:myFirstFont;text-decoration: underline;color: aliceblue">爸爸：<br>&nbsp;&nbsp;恭喜多多成功通关，真棒！<br>快去客厅看看花盆后面是什么？</p>
 		<p id="p2" style="font-size: 20px;font-family: '幼圆';font-weight: bold;color:aliceblue">快跟我去客厅叭</p>
 		<img id="talk" src="imgs/1 (12).png" width="300px" height="150px">
 		</div>
-		<script type="text/javascript">
-		var ball=document.getElementById('ball2')
-		function bigger(){
-			ball.style.width='220px';
-			
-		}
-		function smaller(){
-			ball.style.width='200px';
-			
+	<script type="text/javascript">
+		function bibi(){
+			var audio = document.createElement("audio");
+			audio.src = "music/Mouse on.wav";
+			audio.play();
 		}
 	</script>
 </body>

@@ -15,11 +15,12 @@
 			position: absolute;
 			top: 60px;
 			left: 680px;
+			z-index: 10;
 		}
 		#p1{
 			position: absolute;
 			top: 140px;
-			left: 220px;
+			left: 250px;
 		}
 		#p2{
 			position: absolute;
@@ -34,29 +35,52 @@
 			left: 350px;
 			
 		}
-		
+		#backgr{
+			position: absolute;
+			top:5px;
+			left: 20px;
+			font-family:幼圆;
+			font-size: 20px;
+			font-weight:bolder;
+			color: indianred;
+			border-radius: 10px;
+			background: white;
+			box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.5);
+			width: 200px;
+			height: 40px;
+		}
+		#d1{
+			position: absolute;
+			width: 570px;
+			height: 220px;
+			background: #FFFFFF;
+			opacity: 0.5;
+			border-radius: 20px;
+			top: 29%;
+			left: 22%;
+		}
 	</style>
+	<link href="index.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 	<div class="a">
 	<img src="imgs/game55.jpg" width="960" height="547">
-	<a href="class5.html">
-	<img id="ball2" src="imgs/1 (30).png" onMouseOver="bigger()" onMouseOut="smaller()" width="200">
+	<a href="class5.html" class="imgHoverZoom">
+	<img id="ball2" src="imgs/1 (30).png" width="200" onMouseOver="bibi()">
 		</a>
-		<p id="p1" style="font-size: 50px;font-family: '幼圆';font-weight: bold;color: lavender">嗯哼，这就是最后一关了<br>前面知识点掌握了吗？<br>再跟着豆豆复习一下吧！</p>
+		<p id="p1" style="font-size: 40px;font-family: '幼圆';line-height: 60px;font-weight: bold;color:chocolate">嗯哼，这就是最后一关了<br>前面知识点掌握了吗？<br>再跟着豆豆复习一下吧！</p>
+		<div id="d1"></div>
 		<p id="p2" style="font-size: 20px;font-family: '幼圆';font-weight: bold;color:aliceblue">跟豆豆一起复习吧</p>
 		<img id="talk" src="imgs/1 (12).png" width="350px" height="150px">
+		<input type="button" id="backgr" value="返回关卡索引界面" onclick="javascript:window.location.href='gameroom.html?id=5'"
+		 onMouseOver="this.style.backgroundColor='#FFDEAD',bibi()" onMouseOut="this.style.backgroundColor='white'"/>
 	</div>
 	<script type="text/javascript">
-		var ball=document.getElementById('ball2')
-		function bigger(){
-			ball.style.width='220px';
-			
-		}
-		function smaller(){
-			ball.style.width='200px';
-			
+		function bibi(){
+			var audio = document.createElement("audio");
+			audio.src = "music/Mouse on.wav";
+			audio.play();
 		}
 	</script>
 </body>

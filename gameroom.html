@@ -41,6 +41,36 @@
 			top:-35px;
 			
 		}
+		#logo1{
+			position: absolute;
+			top:-5px;
+			left: 380px;
+			width: 50px;
+			
+		}
+		#logo2{
+			position: absolute;
+			top:45px;
+			left: 380px;
+			width: 50px;
+			
+		}
+		#box1{
+			position: absolute;
+			top:-5px;
+			left: 500px;
+			width: 100px;
+			z-index: 10;
+			
+		}
+		#box2{
+			position: absolute;
+			top:50px;
+			left: 500px;
+			width: 103px;
+			z-index: 10;
+			
+		}
 		#p1{
 			position: absolute;
 			left: 85px;
@@ -59,83 +89,179 @@
 			top: 312px;
 			
 		}
-		
+		#p4{
+			position: absolute;
+			top: 5px;
+			left:45%;
+			font-family: "幼圆";
+			font-weight: bolder;
+			color:#22452B;
+			
+		}
+		#p5{
+			position: absolute;
+			top: 47px;
+			left:45%;
+			font-family: "幼圆";
+			font-weight: bolder;
+			color:#22452B;
+			
+		}
+		#t1{
+			position: absolute;
+			top: 17px;
+			left: 55%;
+			width: 70px;
+			font-weight: bolder;
+			color:red;
+			text-align: center;
+			background: none;
+			border: none;
+			font-size: 15px;
+			z-index: 20;
+			
+			
+		}
+		#t2{
+			position: absolute;
+			top: 60px;
+			left: 55%;
+			width: 70px;
+			color:red;
+			font-weight: bolder;
+			text-align: center;
+			background: none;
+			border: none;
+			font-size: 15px;
+			z-index: 20;
+		}
 	</style>
-
+<link href="index.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 	<div class="a">
-	<img src="imgs/gameroom2.jpg" width="960"><a href="game11.html">
-	<img id="land1" src="imgs/land1.png" onMouseOver="bigger()" onMouseOut="smaller()" width="360" ">
+	<audio id="audio1" autoplay src="music/gameroom.mp3"></audio>
+	<img src="imgs/gameroom2.jpg" width="960">
+	<a href="game11.html" class="imgHoverZoom">
+	<img id="land1" src="imgs/land1.png" width="360" onMouseOver="bibi()" >
 	</a>
 	<p id="p1" style="font-size: 40px;font-family: '幼圆';font-weight: bold;color: #B76B54">回忆岛</p>
-	<a href="game22.html">
-	<img id="land2" src="imgs/land2.png" onMouseOver="bigger2()" onMouseOut="smaller2()" width="190"">
+	<a onClick="check2()" class="imgHoverZoom">
+	<img id="land2" src="imgs/land2.png"  width="190" onMouseOver="bibi()">
 	</a>
 	<p id="p2" style="font-size: 40px;font-family: '幼圆';font-weight: bold;color: #CB97D4">变号岛</p>
-	<a href="game33.html">
-	<img id="land3" src="imgs/land3.png" onMouseOver="bigger3()" onMouseOut="smaller3()" width="300"">
+	<a onclick="check3()" class="imgHoverZoom">
+	<img id="land3" src="imgs/land3.png" width="300" onMouseOver="bibi()">
 	</a>
 	<p id="p3" style="font-size: 40px;font-family: '幼圆';font-weight: bold;color: seagreen">优先岛</p>
-	<a href="game44.html">
-	<img id="land4" src="imgs/land4.png" onMouseOver="bigger4()" onMouseOut="smaller4()" width="320"">
+	<a onClick="check4()" class="imgHoverZoom">
+	<img id="land4" src="imgs/land4.png" width="320" onMouseOver="bibi()">
 	</a>
-	<a href="game55.html">
-	<img id="land5" src="imgs/land5.png" onMouseOver="bigger5()" onMouseOut="smaller5()" width="300"">
+	<a onclick="check5()" class="imgHoverZoom">
+	<img id="land5" src="imgs/land5.png" width="300" onMouseOver="bibi()">
 	</a>
-</div>
+	<p id="p4">已解锁：</p>
+	<input type="text" id="t1"/>
+	<p id="p5">下一关：</p>
+	<input type="text" id="t2"/>
+	<img id="logo1" src="imgs/gameroomlogo1.png">
+	<img id="logo2" src="imgs/gameroomlogo2.png">
+	<img id="box1" src="imgs/gameroombox1.png">
+	<img id="box2" src="imgs/gameroombox2.png">
+</div> 
 	<script type="text/javascript">
-var img = document.getElementById('land1')
-function bigger(){
-img.style.width= '380px';
-img.style.height = '380px';
-}
+		
+		var img = document.getElementById('land1')
+		var t1 = document.getElementById('t1')
+		var t2 = document.getElementById('t2')
+		function GetRequest() {
+            var url = location.search; //获取url中"?"符后的字串
+            var theRequest = new Object();
+            if (url.indexOf("?") != -1) {
+                var str = url.substr(1);
+                strs = str.split("&");
+                for ( var i = 0; i < strs.length; i++) {
+                    theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+                }
+            }
+            return theRequest;
+        }
+		var Request=undefined;
+		Request=GetRequest();
+		var id=Request["id"];
+		var land = document.getElementById('land2')
+		var land3 = document.getElementById('land3')
+		function bigger3(){
+			land3.style.width= '320px';
 
-function smaller(){
-img.style.width = '360px';
-img.style.height = '360px';
-}
-var land = document.getElementById('land2')
-function bigger2(){
-land.style.width= '200px';
+		}
 
-}
+		function smaller3(){
+			land3.style.width = '300px';
 
-function smaller2(){
-land.style.width = '190px';
+		}
+		var land4 = document.getElementById('land4')
+		function bigger4(){
+			land4.style.width= '340px';
 
-}
-var land3 = document.getElementById('land3')
-function bigger3(){
-land3.style.width= '320px';
+		}
 
-}
+		function smaller4(){
+			land4.style.width = '320px';
 
-function smaller3(){
-land3.style.width = '300px';
+		}
+		var land5 = document.getElementById('land5')
+		function bigger5(){
+			land5.style.width= '320px';
 
-}
-var land4 = document.getElementById('land4')
-function bigger4(){
-land4.style.width= '340px';
+		}
 
-}
+		function smaller5(){
+			land5.style.width = '300px';
 
-function smaller4(){
-land4.style.width = '320px';
-
-}
-var land5 = document.getElementById('land5')
-function bigger5(){
-land5.style.width= '320px';
-
-}
-
-function smaller5(){
-land5.style.width = '300px';
-
-}
+		}
+		function check2(){
+	if(id==2||id==3||id==4||id==5)
+		window.location.href='game22.html';
+	else
+		alert("请先完成第一关！");
+		}
+		function check3(){
+	if(id==3||id==4||id==5)
+		window.location.href='game33.html';
+	else
+		alert("请先完成之前的关卡！");
+		}
+		function check4(){
+	if(id==4||id==5)
+		window.location.href='game44.html';
+	else
+		alert("请先完成之前的关卡！");
+		}
+		function check5(){
+	if(id==5)
+		window.location.href='game55.html';
+	else
+		alert("请先完成之前的关卡！");
+		}
+		window.onload=function(){
+			if(id==2)
+			{t1.value="1  关";t2.value="变号岛";}
+			else if(id==3)
+			{t1.value="2  关";t2.value="优先岛";}
+			else if(id==4)
+			{t1.value="3  关";t2.value="消失岛";}
+			else if(id==5)
+			{t1.value="4  关";t2.value="最终の岛";}
+			else
+			{t1.value="0  关";t2.value="回忆岛";}
+		}
+		function bibi(){
+			var audio = document.createElement("audio");
+			audio.src = "music/Mouse on.wav";
+			audio.play();
+		}
 </script> 
 </body>
 </html>

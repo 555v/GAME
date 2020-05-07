@@ -21,35 +21,33 @@
 			top: 60px;
 			left: 600px;
 		}
+		.e1{
+			position: absolute;
+		}
 	</style>
-
+	<link href="index.css" rel="stylesheet" type="text/css">
 </head>
 
 <body >
 
 <div class="a">
-	
+	<embed class="e1" width="0px" type="audio/wav" volume="20" id="audio1" autoplay src="music/index&room2.mp3">
+	<embed class="e1" width="0px" type="audio/wav" volume="100" id="audio2" autoplay src="music/indexnew.wav">
 	<img src="imgs/room11.jpg" width="960"  align="middle">
 	<!--<input type="button" style="background:#DC6530 ;width:150px;height:60px;font-size: 20px;font-family:'幼圆';font-weight: bold;color: aliceblue;position: absolute;left:791px;top:335px" value="点击信封开启" name="b1">-->
-	<a href="room2.html">
+	<a href="room2.html" class="imgHoverZoom">
 	
-	<img id="img" src="imgs/mail.png.png" width="300px" onmouseover="bigger()" onmouseout="smaller()" style="position: absolute;top: 184px;right: 700px">
+	<img id="img" src="imgs/mail.png1.png" width="300px" style="position: absolute;top: 184px;right: 700px" onMouseOver="bibi()">
 	
   </a>
   	<p id="p1" style="font-family: '幼圆';font-size: 26px; color:saddlebrown;font-weight: bold;">贪玩的多多回家后,<br>发现小书桌上有封信。<br>到底是谁写的信呢？<br>打开来看看吧!</p>
 </div>
 	<script type="text/javascript">
-var img = document.getElementById('img')
-function bigger(){
-img.style.width= '350px';
-img.style.height = '350px';
-}
-
-function smaller(){
-img.style.width = '300px';
-img.style.height = '300px';
-}
-
-</script> 
+		function bibi(){
+			var audio = document.createElement("audio");
+			audio.src = "music/Mouse on.wav";
+			audio.play();
+		}
+	</script>
 </body>
 </html>

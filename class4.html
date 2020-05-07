@@ -4,6 +4,10 @@
 <meta charset="utf-8">
 <title>class4</title>
 	<style type="text/css">
+		@keyframes fade-in{  
+   		 0%{ opacity: 0;}
+    	100%{opacity:1;}
+		}
 		.a{
 			position: relative;
 			margin: 0 auto;
@@ -19,32 +23,59 @@
 			position: absolute;
 			top: 84px;
 			left: 300px;
+			opacity: 0;      /*实先规定文字的状态是不显示的*/
+    		animation: fade-in 4s ease 0s 1;    /*调用名称为fade-in的动画，全程动画显示时间4S，进入方式为ease，延时0S进入，播放次数1次*/
+   			 -webkit-animation: fade-in 4s ease 0s 1;
+    		-moz-animation: fade-in 4s ease 0s 1;
+    		-o-animation: fade-in 4s ease 0s 1;
+    		-ms-animation: fade-in 4s ease 0s 1;
+    
+    		/*规定动画的最后状态为结束状态*/
+    		animation-fill-mode:forwards;
+    		-webkit-animation-fill-mode: forwards;  
+     		 -o-animation-fill-mode: forwards; 
+     		 -ms-animation-fill-mode: forwards;   
+      		-moz-animation-fill-mode: forwards; 
 		}
 		#em1{
 			font-size: 23px;
 			font-weight: bold;
 			color: coral;
 		}
+		#backgr{
+			position: absolute;
+			top:30px;
+			left: 100px;
+			font-family:幼圆;
+			font-size: 20px;
+			font-weight:bolder;
+			color: indianred;
+			border-radius: 10px;
+			background: white;
+			box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.5);
+			width: 200px;
+			height: 40px;
+		}
 	</style>
+	<link href="index.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 	<div class="a">
+	<audio src="music/Class4(1).wav" autoplay></audio>
 	<img src="imgs/class1.jpg" width="960" height="547">
-	<a href="go4.html">
-	<img id="ball2" src="imgs/1 (61).png" onMouseOver="bigger()" onMouseOut="smaller()" width="200">
+	<a href="go4.html" class="imgHoverZoom">
+	<img id="ball2" src="imgs/1 (61).png" width="200" onMouseOver="bibi()">
 		</a>
 		<p id="p1" style="font-size: 20px;font-family: '楷体';color: aliceblue">1.括号中包含括号时，<em id="em1">从里向外，依次<br><br>&nbsp;计算</em>，先算最里层的括号的算式，再算<br><br>外层的算式.<br><br>2.举例：<br><br>&nbsp;2+(1-(-3))=2+(1+3)=2+4=6<br><br>&nbsp;8-((3+1)-2*1)=8-(4-2)=8-2=6</p>
+		<input type="button" id="backgr" value="返回关卡索引界面" onclick="javascript:window.location.href='gameroom.html?id=4'"
+		 onMouseOver="this.style.backgroundColor='#008B8B',bibi()" onMouseOut="this.style.backgroundColor='white'"/>
 	</div>
 	<script type="text/javascript">
-		var ball=document.getElementById('ball2')
-		function bigger(){
-			ball.style.width='220px';
-			
-		}
-		function smaller(){
-			ball.style.width='200px';
-			
+		function bibi(){
+			var audio = document.createElement("audio");
+			audio.src = "music/Mouse on.wav";
+			audio.play();
 		}
 	</script>
 </body>

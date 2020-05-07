@@ -17,32 +17,32 @@
 		}
 		#p1{
 			position: absolute;
-			top: 44px;
-			left: 300px;
+			top: 144px;
+			left: 250px;
 		}
 		#p2{
 			position: absolute;
-			top: 144px;
-			left: 470px;
+			top: 244px;
+			left: 370px;
 		}
 		#p3{
 			position: absolute;
-			top: 244px;
-			left: 380px;
+			top: 324px;
+			left: 170px;
 		}
 		#p4{
 			position: absolute;
-			top: -20px;
+			top: -35px;
 			left: 160px;
 		}
 		#p5{
 			position: absolute;
-			top: 370px;
-			left: 460px;
+			top: 10px;
+			left: 620px;
 		}
 		#i1{
 			position: absolute;
-			top: 113px;
+			top: 213px;
 			left: 311px;
 			color:aliceblue;
 			background-color: indianred;
@@ -55,7 +55,7 @@
 		}
 		#i2{
 			position: absolute;
-			top: 113px;
+			top: 213px;
 			left: 400px;
 			color:aliceblue;
 			background-color: indianred;
@@ -65,8 +65,8 @@
 		}
 		#i3{
 			position: absolute;
-			top: 70px;
-			left: 480px;
+			top: 170px;
+			left: 425px;
 			border-radius: 10px;
 			font-size: 30px;
 			color:#FF2A37;
@@ -77,7 +77,7 @@
 		}
 		#i11{
 			position: absolute;
-			top: 208px;
+			top: 308px;
 			left: 481px;
 			color:aliceblue;
 			background-color: indianred;
@@ -90,7 +90,7 @@
 		}
 		#i22{
 			position: absolute;
-			top: 208px;
+			top: 308px;
 			left: 580px;
 			color:aliceblue;
 			background-color: indianred;
@@ -100,8 +100,8 @@
 		}
 		#i33{
 			position: absolute;
-			top: 169px;
-			left: 620px;
+			top: 269px;
+			left: 515px;
 			border-radius: 10px;
 			font-size: 30px;
 			color:#FF2A37;
@@ -112,7 +112,7 @@
 		}
 		#i111{
 			position: absolute;
-			top: 318px;
+			top: 388px;
 			left: 401px;
 			color:aliceblue;
 			background-color:indianred;
@@ -125,7 +125,7 @@
 		}
 		#i222{
 			position: absolute;
-			top: 318px;
+			top: 388px;
 			left: 500px;
 			color:aliceblue;
 			background-color:indianred;
@@ -135,8 +135,8 @@
 		}
 		#i333{
 			position: absolute;
-			top: 269px;
-			left: 580px;
+			top: 349px;
+			left: 370px;
 			border-radius: 10px;
 			font-size: 30px;
 			color:#FF2A37;
@@ -147,48 +147,91 @@
 		}
 		#a21{
 			position: absolute;
-			top: 70px;
-			left: 520px;
+			top: 170px;
+			left: 510px;
 			background-color: transparent;
 			border-width:0px;
 		}
 		#a22{
 			position: absolute;
-			top: 169px;
-			left: 270px;
+			top: 269px;
+			left: 170px;
 			background-color: transparent;
 			border-width:0px;
 		}
 		#a23{
 			position: absolute;
-			top: 269px;
-			left: 670px;
+			top: 349px;
+			left: 450px;
 			background-color: transparent;
 			border-width:0px;
 		}
 		#answer{
 			position: absolute;
-			top: 233px;
-			left: 700px;
+			top: 393px;
+			left: 200px;
 			color:cadetblue;
 			background-color: transparent;
 			font-size: 18px;
 			border: 2px solid ;
 			border-radius: 15px;
 		}
+		#backgr{
+			position: absolute;
+			top:430px;
+			left: 750px;
+			font-family:幼圆;
+			font-size: 20px;
+			font-weight:bolder;
+			color: indianred;
+			border-radius: 10px;
+			background: white;
+			box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.5);
+			width: 200px;
+			height: 40px;
+		}
+		#backgr2{
+			position: absolute;
+			top:480px;
+			left: 750px;
+			font-family:幼圆;
+			font-size: 20px;
+			font-weight:bolder;
+			color: indianred;
+			border-radius: 10px;
+			background: white;
+			box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.5);
+			width: 200px;
+			height: 40px;
+		}
+		#backgr3{
+			position: absolute;
+			top:380px;
+			left: 750px;
+			font-family:幼圆;
+			font-size: 20px;
+			font-weight:bolder;
+			color: indianred;
+			border-radius: 10px;
+			background: white;
+			box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.5);
+			width: 200px;
+			height: 40px;
+		}
 	</style>
+	<link href="index.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 	<div class="a">
-	<img src="imgs/go3.jpg" width="960" height="547">
-	<a href="gameroom.html">
-	<img id="ball2" src="imgs/1 (67).png" onMouseOver="bigger()" onMouseOut="smaller()" width="200" >
+	<img src="imgs/go3new.jpg" width="960" height="547">
+	<a onClick="check2()" class="imgHoverZoom">
+	<img id="ball2" src="imgs/1 (67).png" width="200" onMouseOver="bibi()">
 	</a>
 	<p id="p1" style="font-size: 25px">3*(2+1)+4=10&nbsp;(&nbsp;&nbsp;&nbsp;)</p>
 	<p id="p2" style="font-size: 25px">3-(5-2*2)=5&nbsp;(&nbsp;&nbsp;&nbsp;)</p>
 	<p id="p3" style="font-size: 25px">7*(2*3-4)+1=15&nbsp;(&nbsp;&nbsp;&nbsp;)</p>
-	<p id="p5" style="font-size: 25px；font-family:'幼圆';font-weight: bold;color:cornflowerblue">掌握了就跟着星球使者进入下一关吧！</p>
+	<p id="p5" style="font-size: 25px；font-family:'幼圆';font-weight: bold;color:cornflowerblue">掌握了就跟着星球使者继续闯关吧</p>
 	<p id="p4" style="font-size: 35px;font-family:'幼圆';font-weight: bold;color: maroon">完成下列判断题：</p>
 	<input type="button" title="height:50px;width:100px" id="i1" value=" √ " onClick="compute(this.id)"/>
 	<input type="button" id="i2" value=" × " title="heght:50px;width:100px" onClick="compute(this.id)"/>
@@ -201,38 +244,85 @@
 	<input type="text" style="height:30px;width:40px;text-align: center" class="i333" id="i333" value="?"/>
 	<input type="text" id="a21" style="text-align: center;height: 30px;width: 200px;font-size: 18px;color: firebrick" disabled>
 	<input type="text" id="a22" style="text-align: center;height: 30px;width: 200px;font-size: 18px;color: firebrick" disabled>
-	<input type="text" id="a23" style="text-align: center;height: 30px;width: 200px;font-size: 18px;color: firebrick" disabled>
-	<input type="button" id="answer" title="height:30px;width:120px;" onClick="sub()" value="完成后点击查看解析"/>
+	<input type="text" id="a23" style="text-align: center;height: 30px;width: 280px;font-size: 18px;color: firebrick" disabled>
+	<input type="button" id="answer" title="height:30px;width:120px;" onMouseOver="bibi()" onClick="check()" value="完成后点击查看解析"/>
+	<input type="button" id="backgr" value="返回关卡索引界面" onclick="javascript:window.location.href='gameroom.html?id=3'"
+		 onMouseOver="this.style.backgroundColor='#7FFFD4',bibi()" onMouseOut="this.style.backgroundColor='white'"/>
+		 <input type="button" id="backgr2" value="返回观看知识点" onclick="javascript:window.location.href='class3.html'"
+		 onMouseOver="this.style.backgroundColor='#7FFFD4',bibi()" onMouseOut="this.style.backgroundColor='white'"/>
+		 <input type="button" id="backgr3" value="直接进入下一关" onclick="check3()"
+		 onMouseOver="this.style.backgroundColor='#7FFFD4',bibi()" onMouseOut="this.style.backgroundColor='white'"/>
 	</div>
 	<script type="text/javascript">
-		var ball=document.getElementById('ball2')
-		function bigger(){
-			ball.style.width='220px';
-			
-		}
-		function smaller(id){
-			ball.style.width='200px';
-			
-		}
+		var i3=document.getElementById('i3')
+		var i33=document.getElementById('i33')
+		var i333=document.getElementById('i333')
+		
 		function compute(id){
 			if(id=="i1")
+				{
 			document.getElementById("i3").value="√";
+			document.getElementById("a21").value="";
+				}
 			if(id=="i2")
+				{
 			document.getElementById("i3").value="×";
+			document.getElementById("a21").value="再仔细思考一下噢~";
+				}
 			if(id=="i11")
+				{
 			document.getElementById("i33").value="√";
+			document.getElementById("a22").value="再仔细思考一下噢~";
+				}
 			if(id=="i22")
+				{
 			document.getElementById("i33").value="×";
+			document.getElementById("a22").value="";
+				}
 			if(id=="i111")
+				{
 			document.getElementById("i333").value="√";
+			document.getElementById("a23").value="";
+				}
 			if(id=="i222")
+				{
 			document.getElementById("i333").value="×";
+			document.getElementById("a23").value="再仔细思考一下噢~";
+				}
 			
 		}
 		function sub(){
 			document.getElementById("a21").value="√  ∵3*2+4=6+4=10";
 			document.getElementById("a22").value="×  ∵3-(5-4)=3-1=2";
 			document.getElementById("a23").value="√  ∵7*(6-4)+1=7*2+1=14+1=15";
+		}
+		function warning(){
+			document.getElementById("a21").value="请先完成答题！";
+		}
+		function check()
+		{
+			if(i3.value=="?"||i33.value=="?"||i333.value=="?")
+				warning();
+			else
+				sub();
+				
+		}
+		function check2(){
+			if(i3.value=="?"||i33.value=="?"||i333.value=="?")
+				alert("完成答题后才能跳转！");
+			else
+				window.location.href='gameroom.html?id=4';
+		}
+		function check3(){
+			if(i3.value=="?"||i33.value=="?"||i333.value=="?")
+				alert("完成答题后才能进入下一关！");
+			else
+				window.location.href='game44.html';
+		}
+		function bibi(){
+			var audio = document.createElement("audio");
+			audio.src = "music/Mouse on.wav";
+			audio.play();
 		}
 	</script>
 </body>

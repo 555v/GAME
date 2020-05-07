@@ -1,0 +1,327 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>go5no2</title>
+	<style type="text/css">
+		.a{
+			position: relative;
+			margin: 0 auto;
+			width: 960px;
+			height: 547px;
+		}
+		#ball2{
+			position: absolute;
+			top: 60px;
+			left: 680px;
+		}
+		#p1{
+			position: absolute;
+			top: 184px;
+			left: 300px;
+		}
+		
+		#i3{
+			position: absolute;
+			top: 53px;
+			left: 339px;
+			border-radius: 10px;
+			font-size: 30px;
+			color:#FF2A37;
+			border: 2px solid white;
+		}
+		
+		
+		#i33{
+			position: absolute;
+			top: 126px;
+			left: 339px;
+			border-radius: 10px;
+			font-size: 30px;
+			color:#FF2A37;
+			border: 2px solid white;
+		}
+		
+		#i333{
+			position: absolute;
+			top: 206px;
+			left: 339px;
+			border-radius: 10px;
+			font-size: 30px;
+			color:#FF2A37;
+			border: 2px solid white;
+		}
+		#p0{
+			position: absolute;
+			top: 4px;
+			left: 684px;
+		}
+		#p1{
+			position: absolute;
+			top: 2px;
+			left: 10%;
+			font-family:"X-小葱手迹";
+			font-weight:bolder;
+		}
+		#p11{
+			position: absolute;
+			color: brown;
+			top: 2px;
+			left: 45%;
+			font-family:"X-小葱手迹";
+			font-weight:bolder;
+		}
+		#p2{
+			position: absolute;
+			top: 76px;
+			left: 10%;
+			font-family:"X-小葱手迹";
+			font-weight:bolder;
+		}
+		#p22{
+			position: absolute;
+			color: brown;
+			top: 76px;
+			left: 45%;
+			font-family:"X-小葱手迹";
+			font-weight:bolder;
+		}
+		#p3{
+			position: absolute;
+			top: 156px;
+			left: 7%;
+			font-family:"X-小葱手迹";
+			font-weight:bolder;
+		}
+		#p33{
+			position: absolute;
+			color: brown;
+			top: 156px;
+			left: 45%;
+			font-family:"X-小葱手迹";
+			font-weight:bolder;
+		}
+		#a1{
+			text-decoration: none;
+			color:aliceblue;
+		}
+		#a2{
+			text-decoration: none;
+			color: aliceblue;
+		}
+		#p4{
+			position: absolute;
+			top: 226px;
+			left: 4%;
+			font-family:"X-小葱手迹";
+			font-weight:bolder;
+		}
+		#p44{
+			position: absolute;
+			color: brown;
+			top: 226px;
+			left: 45%;
+			font-family:"X-小葱手迹";
+			font-weight:bolder;
+		}
+		#p5{
+			position: absolute;
+			top: 296px;
+			left: 2%;
+			font-family:"X-小葱手迹";
+			font-weight:bolder;
+		}
+		#p55{
+			position: absolute;
+			color: brown;
+			top: 296px;
+			left: 45%;
+			font-family:"X-小葱手迹";
+			font-weight:bolder;
+		}
+		#p6{
+			position: absolute;
+			top: 366px;
+			left: 7%;
+			font-family:"X-小葱手迹";
+			font-weight:bolder;
+		}
+		#p66{
+			position: absolute;
+			color: brown;
+			top: 366px;
+			left: 45%;
+			font-family:"X-小葱手迹";
+			font-weight:bolder;
+		}
+		
+		#i34{
+			position: absolute;
+			top: 276px;
+			left: 339px;
+			border-radius: 10px;
+			font-size: 30px;
+			color:#FF2A37;
+			border: 2px solid white;
+		}
+		
+		#i35{
+			position: absolute;
+			top: 346px;
+			left: 339px;
+			border-radius: 10px;
+			font-size: 30px;
+			color:#FF2A37;
+			border: 2px solid white;
+		}
+		
+		#i36{
+			position: absolute;
+			top: 416px;
+			left: 339px;
+			border-radius: 10px;
+			font-size: 30px;
+			color:#FF2A37;
+			border: 2px solid white;
+		}
+		#backgr{
+			position: absolute;
+			top:430px;
+			left: 710px;
+			font-family:幼圆;
+			font-size: 20px;
+			font-weight:bolder;
+			color: indianred;
+			border-radius: 10px;
+			background: white;
+			box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.5);
+			width: 200px;
+			height: 40px;
+		}
+		#backgr2{
+			position: absolute;
+			top:480px;
+			left: 710px;
+			font-family:幼圆;
+			font-size: 20px;
+			font-weight:bolder;
+			color: indianred;
+			border-radius: 10px;
+			background: white;
+			box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.5);
+			width: 200px;
+			height: 40px;
+		}
+		#b1{
+			position: absolute;
+			width: 300px;
+			height: 50px;
+			top: 8%;
+			left: 1%;
+			opacity: 0.8;
+		}
+		#b2{
+			position: absolute;
+			width: 300px;
+			height: 50px;
+			top: 21.5%;
+			left: 1%;
+			opacity: 0.8;
+		}
+		#b3{
+			position: absolute;
+			width: 300px;
+			height: 50px;
+			top: 36%;
+			left: 1%;
+			opacity: 0.8;
+		}
+		#b4{
+			position: absolute;
+			width: 300px;
+			height: 50px;
+			top: 48.8%;
+			left: 1%;
+			opacity: 0.8;
+		}
+		#b5{
+			position: absolute;
+			width: 300px;
+			height: 50px;
+			top: 62%;
+			left: 1%;
+			opacity: 0.8;
+		}
+		#b6{
+			position: absolute;
+			width: 300px;
+			height: 50px;
+			top: 74.5%;
+			left: 1%;
+			opacity: 0.8;
+		}
+	</style>
+	<link href="index.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="a">
+	<img src="imgs/go5.jpg" width="960" height="547">
+	<img id="b1" src="imgs/5.jpg" width="665" height="1088" alt=""/>
+	<img id="b2" src="imgs/5.jpg" width="665" height="1088" alt=""/>
+	<img id="b3" src="imgs/5.jpg" width="665" height="1088" alt=""/>
+	<img id="b4" src="imgs/5.jpg" width="665" height="1088" alt=""/>
+	<img id="b5" src="imgs/5.jpg" width="665" height="1088" alt=""/>
+	<img id="b6" src="imgs/5.jpg" width="665" height="1088" alt=""/>
+	<audio id="click1" autoplay>
+		<source src="music/Mouse on.wav" type="audio/mpeg">
+	</audio>
+	<a onclick="check2()" class="imgHoverZoom">
+	<img id="ball2" src="imgs/1 (30).png" width="200" onMouseOver="bibi()">
+	  </a>
+	  <p id="p1" style="font-size: 40px">2+3*2+1=</p>
+<input type="text" style="height:30px;width:70px;text-align: center" class="i3" id="i3" value="9"/>
+	 <p id="p11" style="font-size: 40px">∵2+6+1=9</p>
+	<p id="p2" style="font-size:40px" >3+(-2) =</p>
+<input type="text" style="height:30px;width:70px;text-align: center" class="i33" id="i33" value="1"/>
+	<p id="p22" style="font-size:40px" >∵3-2=1</p>
+	<p id="p3" style="font-size:40px">3*(2+1)+4=</p>
+<input type="text" style="height:30px;width:70px;text-align: center" class="i333" id="i333" value="13"/>
+	<p id="p33" style="font-size:40px">∵3*3+4=9+4=13</p>
+	<p id="p4" style="font-size:40px">2-(2-(-6+3))=</p>
+<input type="text" style="height:30px;width:70px;text-align: center" class="i34" id="i34" value="-3"/>
+	<p id="p44" style="font-size:40px">∵2-(2-(-3))=2-(2+3)=2-5=-3</p>
+	<p id="p5" style="font-size:40px">8-(2-(3*1+2))=</p>
+<input type="text" style="height:30px;width:70px;text-align: center" class="i35" id="i35" value="11"/>
+	<p id="p55" style="font-size:40px">∵8-(2-5)=8-(-3)=8+3=11</p>
+	<p id="p6" style="font-size:40px">3-(5-2*2)=</p>
+<input type="text" style="height:30px;width:70px;text-align: center" class="i36" id="i36" value="2"/>
+	<p id="p66" style="font-size:40px">∵3-(5-4)=3-1=2</p>
+		<p id="p0" style="font-size: 20px;font-family:'幼圆';font-weight: bold;color:coral">全部答对了就跟豆豆走叭！</p>
+		<input type="button" id="backgr" value="返回关卡索引界面" onclick="javascript:window.location.href='gameroom.html?id=5'"
+		 onMouseOver="this.style.backgroundColor='#FFDEAD',bibi()" onMouseOut="this.style.backgroundColor='white'"/>
+		 <input type="button" id="backgr2" value="返回观看知识点" onclick="javascript:window.location.href='class5.html'"
+		 onMouseOver="this.style.backgroundColor='#FFDEAD',bibi()" onMouseOut="this.style.backgroundColor='white'"/>
+	</div>
+	<script type="text/javascript">
+		var i3=document.getElementById('i3')
+		var i33=document.getElementById('i33')
+		var i333=document.getElementById('i333')
+		var i34=document.getElementById('i34')
+		var i35=document.getElementById('i35')
+		var i36=document.getElementById('i36')
+		var click1=document.getElementById('click1')
+		
+		function check2(){
+			
+				window.location.href='congradulation.html';
+		}
+		function bibi(){
+			var audio = document.createElement("audio");
+			audio.src = "music/Mouse on.wav";
+			audio.play();
+		}
+	</script>
+</body>
+</html>
+
